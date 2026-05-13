@@ -188,7 +188,7 @@ services.openssh = {
 networking.firewall.enable = true;
 networking.firewall.allowedTCPPorts = [ 22 ];
 ```
-Nachdem die Konfiguration angepasst wurden (siehe [configuration_minimal](https://github.com/hth73/hth-nixos/blob/main/configuration_minimal_v1.nix)), kann alles mit `nixos-install` auf die Festplatte geschrieben werden. Wenn das System fertig installiert wurde fährt man die VM herunter und entfernt das CD Image in der VM.
+Nachdem die Konfiguration angepasst wurden (siehe [configuration_minimal](https://github.com/hth73/hth-nixos/blob/main/configuration_minimal_v1.txt)), kann alles mit `nixos-install` auf die Festplatte geschrieben werden. Wenn das System fertig installiert wurde fährt man die VM herunter und entfernt das CD Image in der VM.
 
 > [!TIP]<br>
 > Das Root Passwort wird am Ende des Installations Prozesses abgefragt.
