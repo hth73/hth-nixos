@@ -5,16 +5,18 @@
   home.homeDirectory = "/home/hth";
   home.stateVersion = "25.11";
 
-  home.file.".".source = ../dotfiles/common/.bash_profile;
-  home.file.".".source = ../dotfiles/common/.bashrc;
-  home.file.".".source = ../dotfiles/common/.gitconfig;
-  home.file.".".source = ../dotfiles/common/.LESS_TERMCAP;
+  # Files in Home Folder
+  home.file."wallpaper".source = ../dotfiles/hth/wallpaper;
+  home.file.".bash_profile".source = ../dotfiles/common/.bash_profile;
+  home.file.".bashrc".source = ../dotfiles/hth/.bashrc;
+  home.file.".".gitconfigsource = ../dotfiles/hth/.gitconfig;
+  home.file.".LESS_TERMCAP".source = ../dotfiles/hth/.LESS_TERMCAP;
 
-  home.file."./wallpaper".source = ../dotfiles/hth/wallpaper;
-  home.file.".config/bat".source = ../dotfiles/common/bat;
-  home.file.".config/btop".source = ../dotfiles/common/btop;
-  home.file.".config/pcmanfm".source = .../dotfiles/common/pcmanfm;
-  home.file.".config/qtile".source = .../dotfiles/common/qtile;
+  # Config Files User Environment
+  home.file.".config/bat".source = ../dotfiles/config/bat;
+  home.file.".config/btop".source = ../dotfiles/config/btop;
+  home.file.".config/pcmanfm".source = .../dotfiles/config/pcmanfm;
+  home.file.".config/qtile".source = .../dotfiles/config/qtile;
 
   programs.alacritty = {
     enable = true;
