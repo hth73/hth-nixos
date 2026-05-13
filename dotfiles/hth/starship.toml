@@ -11,22 +11,20 @@ ssh_only = false
 format = "[$hostname](bold green)"
 
 [directory]
-truncation_length = 100
+truncation_length = 20
 truncate_to_repo = false
 format = "[$path](bold blue)"
 
 [git_branch]
-symbol = "🌿 "
-format = "[$branch](bold mauve)"
+symbol = " "
+format = "[$symbol$branch](bold mauve)"
 
 [git_status]
 format = " [($staged$modified$untracked$ahead_behind)]($style)"
 style = "bold"
-
 staged = "[+](green)"
 modified = "[*](yellow)"
 untracked = "[?](red)"
-
 ahead = "[⇡${count}](cyan)"
 behind = "[⇣${count}](cyan)"
 diverged = "[⇕⇡${ahead_count}⇣${behind_count}](cyan)"
