@@ -20,7 +20,9 @@
     chromium    
     eza
     fastfetch
+    fd
     feh
+    fzf
     gedit
     git
     gnupg
@@ -28,11 +30,13 @@
     jq
     lsof
     meld
+    neovim
     ncdu
     pcmanfm
     pwgen
     ripgrep
     rofi
+    starship
     traceroute
     tree
     unzip
@@ -40,7 +44,6 @@
     vscodium    
     wget
     whois
-    xclip
     xwallpaper
     yq
   ];
@@ -53,6 +56,7 @@
     enable = true;
     settings = {    
       paging = "never";
+      style = "plain";
     };
   };
 

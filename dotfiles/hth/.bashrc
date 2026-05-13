@@ -11,6 +11,12 @@ fi
 
 alias sshl='grep -slR "PRIVATE" "$HOME/.ssh/" 2>/dev/null | xargs -r ssh-add'
 
+# command-line fuzzy finder
+eval "$(fzf --bash)"
+
+# enable starship
+eval "$(starship init bash)"
+
 # Debug Promt
 export PS4=$'|(${BASH_SOURCE##*/}:${LINENO}):\t${FUNCNAME[0]:+${FUNCNAME[0]}(): }'
 
