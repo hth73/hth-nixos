@@ -5,6 +5,21 @@
   home.homeDirectory = "/home/hth";
   home.stateVersion = "25.11";
 
+  home.packages = with pkgs; [
+    age
+    cht.sh
+    flux
+    helm
+    k3d
+    k9s
+    kubectl
+    kustomize
+    packer
+    sops
+    terraform
+    vagrant
+  ];
+
   # Files in Home Folder
   home.file."wallpaper".source = ../dotfiles/hth/wallpaper;
   home.file.".bash_profile".source = ../dotfiles/common/.bash_profile;
