@@ -69,3 +69,12 @@ nrs() {
   sudo nixos-rebuild switch --flake .#"$(hostname -s)"
 }
 
+nrb() {
+  sudo nixos-rebuild dry-build --flake .#"$(hostname -s)"
+}
+
+nru() {
+  nix flake update
+  sudo nixos-rebuild switch --flake .#"$(hostname -s)"
+}
+
