@@ -6,13 +6,13 @@ in
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [ # Include all modules and user configuration
+      (import "${home-manager}/nixos")
       ./hardware-configuration.nix
       ./modules/openssh.nix
       ./modules/firewall.nix
       ./modules/packages.nix
       ./modules/clamav.nix
-      (import "${home-manager}/nixos")
       ./home-manager/common.nix
     ];
 

@@ -8,4 +8,3 @@ export LESS_TERMCAP_ue=$(tput sgr0)
 export LESS_TERMCAP_mr=$(tput rev)
 export LESS_TERMCAP_mh=$(tput dim)
 export GROFF_NO_SGR=1
-
