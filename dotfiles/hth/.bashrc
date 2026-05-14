@@ -61,4 +61,11 @@ alias vi=nvim
 alias ff='fd --type f | fzf'
 alias vf='nvim "$(fd -tf | fzf --preview "bat --color=always --style=plain {}")"'
 
-alias nrs='sudo nixos-rebuild switch'
+# ohne flake
+# alias nrs='sudo nixos-rebuild switch'
+
+# mit flake
+nrs() {
+  sudo nixos-rebuild switch --flake .#"$(hostname -s)"
+}
+
