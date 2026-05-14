@@ -59,6 +59,6 @@ alias ver=fastfetch
 alias vi=nvim
 
 alias ff='fd --type f | fzf'
-alias vf='nvim "$(fd --type f | fzf)"'
+alias vf='nvim "$(fd -tf | fzf --preview "bat --color=always --style=plain {}")"'
 
 alias nrs='sudo nixos-rebuild switch'
