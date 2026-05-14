@@ -45,7 +45,6 @@ alias av='freshclam --version'
 alias cat='bat --plain --paging=never'
 alias cfg='vi ~/.bashrc'
 alias cmount='mount | column -t'
-alias d='dirs -v | head -10'
 alias disk='sudo ncdu'
 alias h=history
 alias ipcalc='ipcalc --nocolor'
@@ -58,5 +57,8 @@ alias shutdown='sudo shutdown -h now'
 alias up=uptime
 alias ver=fastfetch
 alias vi=nvim
+
+alias ff='fd --type f | fzf'
+alias vf='nvim "$(fd --type f | fzf)"'
 
 alias nrs='sudo nixos-rebuild switch'

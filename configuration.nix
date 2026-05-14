@@ -30,6 +30,9 @@ in
     enable = true;
     wheelNeedsPassword = true;
   };
+
+  # Allow unfree license Pakages
+  nixpkgs.config.allowUnfree = true;
  
   # Set your time zone.
   time.timeZone = "Europe/Berlin";

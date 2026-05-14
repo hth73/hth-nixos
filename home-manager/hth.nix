@@ -7,17 +7,17 @@
 
   home.packages = with pkgs; [
     age
-    cht.sh
-    flux
-    helm
-    k3d
-    k9s
-    kubectl
-    kustomize
-    packer
+    cht-sh
+    # fluxcd
+    # helm
+    # k3d
+    # k9s
+    # kubectl
+    # kustomize
+    # packer
     sops
-    terraform
-    vagrant
+    # terraform
+    # vagrant
   ];
 
   # Files in Home Folder
