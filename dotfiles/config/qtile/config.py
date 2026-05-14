@@ -151,7 +151,7 @@ widget_defaults = dict(
 )
 extension_defaults = widget_defaults.copy()
 
-logo = os.path.join(os.path.dirname(libqtile.resources.__file__), "/home/hth/.dotfiles/wallpaper/bench.png")
+logo = os.path.join(os.path.dirname(libqtile.resources.__file__), "/home/hth/wallpaper/bench.png")
 screens = [
     Screen(
         top=bar.Bar(

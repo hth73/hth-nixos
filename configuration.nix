@@ -16,7 +16,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Hostname
-  networking.hostName = "nixus";
+  networking.hostName = "mynixos";
 
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
