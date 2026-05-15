@@ -8,8 +8,8 @@
       # =========================
       # Authentication
       # =========================
-      PermitRootLogin = "no";
-      PasswordAuthentication = false;
+      PermitRootLogin = "yes";
+      PasswordAuthentication = true;
       KbdInteractiveAuthentication = false;
       ChallengeResponseAuthentication = false;
       AuthenticationMethods = "publickey";
