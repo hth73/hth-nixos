@@ -1,7 +1,7 @@
 {
   disko.devices.disk.main = {
     type = "disk";
-    device = "/dev/sda";
+    device = "/dev/sdb";
 
     content = {
       type = "gpt";
@@ -10,7 +10,6 @@
         ESP = {
           size = "512M";
           type = "EF00";
-
           content = {
             type = "filesystem";
             format = "fat";
@@ -20,7 +19,6 @@
 
         swap = {
           size = "2G";
-
           content = {
             type = "swap";
             randomEncryption = false;
@@ -29,7 +27,6 @@
 
         root = {
           size = "100%";
-
           content = {
             type = "filesystem";
             format = "ext4";
