@@ -1,7 +1,7 @@
 {
   disko.devices.disk.main = {
     type = "disk";
-    device = "/dev/sdb";
+    device = "/dev/null";  # wird von nixos-anywhere überschrieben
 
     content = {
       type = "gpt";
