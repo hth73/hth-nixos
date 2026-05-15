@@ -4,16 +4,28 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
-  imports = [
-    (modulesPath + "/installer/scan/not-detected.nix")
-  ];
+  imports = [ ];
 
-  boot.initrd.availableKernelModules = [ 
-    "ata_piix"
-    "ohci_pci"
-    "ehci_pci"
-    "ahci"
-    "sd_mod"
-  ];
+  boot.initrd.availableKernelModules = [ "ata_piix" "ohci_pci" "ehci_pci" "ahci" "sd_mod" "sr_mod" ];
+  boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ ];
+  boot.extraModulePackages = [ ];
+
+  fileSystems."/" =
+    { device = "/dev/disk/by-uuid/ef630e60-76f7-4fdb-a9e4-72b46398d364";
+      fsType = "ext4";
+    };
+
+  fileSystems."/boot" =
+    { device = "/dev/disk/by-uuid/574A-0478";
+      fsType = "vfat";
+      options = [ "fmask=0022" "dmask=0022" ];
+    };
+
+  swapDevices =
+    [ { device = "/dev/disk/by-uuid/33a578d4-164b-41c0-a1fc-333d2824c922"; }
+    ];
+
+  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+  virtualisation.virtualbox.guest.enable = true;
 }
