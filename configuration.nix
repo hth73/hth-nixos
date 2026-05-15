@@ -4,6 +4,7 @@
   imports =
     [ # Include all modules and user configuration
       ./hardware-configuration.nix
+      ./disko.nix
       ./modules/openssh.nix
       ./modules/firewall.nix
       ./modules/packages.nix
