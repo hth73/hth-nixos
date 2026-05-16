@@ -20,10 +20,10 @@ Vor der Integration von Flakes wurde das System mit folgendem Befehl upgedatet.
 sudo nixos-rebuild switch --upgrade-all
 ```
 
-Nach der Integration von `Flake` erfolgt der Build über die in der `flake.nix` definierte Host-Konfiguration. `#nixus` am Ende des Befehls steht für den lokalen Hostname.
+Nach der Integration von `Flake` erfolgt der Build über die in der `flake.nix` definierte Host-Konfiguration. `#mynixos` am Ende des Befehls steht für den lokalen Hostname.
 
 ```bash
-sudo nixos-rebuild switch --flake /etc/nixos#nixus
+sudo nixos-rebuild switch --flake /etc/nixos#mynixos
 ```
 
 ## Aufbau der flake.nix
@@ -43,7 +43,7 @@ Die Datei `flake.lock` speichert die exakten Versionen aller verwendeten Abhäng
   };
 
   outputs = { self, nixpkgs, home-manager, ... }: {
-    nixosConfigurations.nixus =
+    nixosConfigurations.mynixos =
       nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
@@ -73,7 +73,7 @@ Neue Paketstände innerhalb des definierten Release-Zweigs werden mit folgendem 
 
 ```bash
 nix flake update
-sudo nixos-rebuild switch --flake /etc/nixos#nixus
+sudo nixos-rebuild switch --flake /etc/nixos#mynixos
 ```
 
 ## Mehrere Hosts verwalten
