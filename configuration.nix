@@ -76,7 +76,6 @@
     isNormalUser = true;
     description = "Helmut Thurnhofer";
     group = "hth";
-    hashedPassword = "$6$ewxLeFniAnpiLfTU$o12yl4BBphmHxOm/8ycC7YyIFfPfNZ/HV0wqCobONYci.HZYsL8pSn1gSF/oDBkkNldheN2pSE/oNq68gpRpO0";
     extraGroups = [ 
       "wheel"
       "networkmanager"

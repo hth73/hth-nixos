@@ -171,7 +171,9 @@ console.keyMap = "de";
 # Basis Pakete
 environment.systemPackages = with pkgs; [
   curl
-  vim
+  git
+  neovim # oder vim
+  python3 # Für Ansible Installation - https://github.com/hth73/hth-ansible-wks
   wget
 ];
 
