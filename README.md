@@ -1,4 +1,8 @@
-# NixOS Test Environment
+# NixOS Umgebung
+
+<p>
+  <img src="images/nixos.jpg" width="50%" height="50%" />
+</p>
 
 <img src="https://img.shields.io/badge/VirtualBox-2F61B4?style=flat&logo=virtualbox&labelColor=ffffff&logoColor=2F61B4" /> <img src="https://img.shields.io/badge/NixOS-5277C3?style=flat&logo=nixos&labelColor=ffffff&logoColor=5277C3" /> <img src="https://img.shields.io/badge/NixOS%20Home%20Manager-5277C3?style=flat&logo=nixos&labelColor=ffffff&logoColor=5277C3" /> <img src="https://img.shields.io/badge/NixOS%20Flakes-5277C3?style=flat&logo=nixos&labelColor=ffffff&logoColor=5277C3" />
 
@@ -131,7 +135,7 @@ mount -t efivarfs efivarfs /sys/firmware/efi/efivars
 lsblk
 ```
 
-Sollte was nicht funktioniert haben, kann man die Festplatte jederzeit wieder bereinigen und von neuen beginnen.
+Sollte mal was nicht funktioniert haben, kann man die Festplatte jederzeit wieder bereinigen und von neuen beginnen.
 
 ```bash
 # Festplatte bei Bedarf wieder komplett bereinigen
@@ -150,7 +154,7 @@ Nachdem die Festplatte vorbereitet und in das `/mnt` Verzeichnis gemountet wurde
 nixos-generate-config --root /mnt
 ```
 
-Meine absolute Basis Konfiguration am Anfang war folgende, um später per SSH auf die Maschine zugreifen zu können. Alles andere wurde dann im zweiten Schritt konfiguriert.
+Meine absolute Basis Konfiguration war am Anfang folgende. Alles andere wurde dann im zweiten Schritt nach konfiguriert.
 
 ```bash
 # Konfigurationsanpassungen für den ersten Boot
@@ -190,6 +194,7 @@ services.openssh = {
 networking.firewall.enable = true;
 networking.firewall.allowedTCPPorts = [ 22 ];
 ```
+
 Nachdem die Konfiguration angepasst wurden (siehe [configuration_minimal](https://github.com/hth73/hth-nixos/blob/main/configuration_minimal_v1.txt)), kann alles mit `nixos-install` auf die Festplatte geschrieben werden. Wenn das System fertig installiert wurde fährt man die VM herunter und entfernt das CD Image in der VM.
 
 > [!TIP]<br>
