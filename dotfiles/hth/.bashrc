@@ -11,6 +11,9 @@ fi
 
 alias sshl='grep -slR "PRIVATE" "$HOME/.ssh/" 2>/dev/null | xargs -r ssh-add'
 
+# PATH
+export PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+
 # command-line fuzzy finder
 eval "$(fzf --bash)"
 
